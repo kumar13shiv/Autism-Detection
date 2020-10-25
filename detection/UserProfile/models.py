@@ -7,7 +7,7 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     mail = models.EmailField(blank=False)
-    birth_date = models.DateField(null=False, blank=False, default=date.today)
+    age = models.IntegerField(blank=False, null=True)
     MALE = 'M'
     FEMALE = 'F'
     OTHERS = 'O'
